@@ -1,7 +1,7 @@
 // src/tasks.rs
 
 pub struct TodoList {
-    tasks: Vec<String>,
+    pub tasks: Vec<String>,
 }
 
 impl TodoList {
