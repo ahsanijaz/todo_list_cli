@@ -1,12 +1,15 @@
 // src/tasks.rs
 
 pub struct TodoList {
-    pub tasks: Vec<String>,
+    tasks: Vec<String>,
 }
 
 impl TodoList {
     pub fn new() -> TodoList {
         TodoList { tasks: Vec::new() }
+    }
+    pub fn tasks(&self) -> &[String] {
+        &self.tasks
     }
 
     pub fn add_task(&mut self, task: String) {

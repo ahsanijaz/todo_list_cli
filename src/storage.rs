@@ -6,7 +6,7 @@ use std::io::{self, Write};
 
 pub fn save_tasks(file_path: &str, todo_list: &TodoList) -> io::Result<()> {
     let mut file = fs::File::create(file_path)?;
-    for task in &todo_list.tasks {
+    for task in todo_list.tasks() {
         writeln!(file, "{}", task)?;
     }
     Ok(())
