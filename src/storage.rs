@@ -20,3 +20,7 @@ pub fn load_tasks(file_path: &str) -> io::Result<TodoList> {
     }
     Ok(todo_list)
 }
+
+pub fn check_tasks(todo_list: &TodoList) -> bool {
+    true
+}
